@@ -1,6 +1,5 @@
-﻿using System;
+﻿using PinGallery.Pages;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace PinGallery
 {
@@ -9,11 +8,10 @@ namespace PinGallery
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
-        protected override void OnStart()
+        protected async override void OnStart()
         {
         }
 
